@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./style/style.css" />
+        <link rel="stylesheet" href="./style/reset.css" />
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <title>YuMeCAFE</title>
+    </head>
+    <body class="l-body">
+        <div class="l-wrap">
+            <div class="l-header">
+                <div class="p-nav">
+                    <ul class="p-nav__icon">
+                        <li><img class="p-nav__iconInstaglam" src="img/instaglam.png" alt="インスタグラムのアイコン"></li>
+                        <li><img class="p-nav__iconFacebook" src="img/facebook.png" alt="フェイスブックのアイコン"></li>
+                        <li><img class="p-nav__iconTwitter" src="img/twitter.png" alt="ツイッターのアイコン"></li>
+                    </ul>
+                    <ul class="p-nav__text">
+                        <li><a href="#news" class="p-nav__textNews">NEWS</a></li>
+                        <li><a href="#access" class="p-nav__textAccess">ACCESS</a></li>
+                        <li><a href="#contact" class="p-nav__textContact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <button type="button" class="c-navBtn">
+                    <div class="c-navBtn__bar">
+                        <span class="c-navBtn-bar01"></span>
+                        <span class="c-navBtn-bar02"></span>
+                        <span class="c-navBtn-bar03"></span>
+                    </div>
+                </button>
+                <div class="l-hamburger">
+                    <div class="p-hamburgerMenu">
+                        <ul class="p-hamburgerText">
+                            <li><a href="#news" class="p-hamburgerText__news">NEWS</a></li>
+                            <li><a href="#access" class="p-hamburgerText__access">ACCESS</a></li>
+                            <li><a href="#contact" class="p-hamburgerText__contact">CONTACT</a></li>
+                        </ul>
+                        <ul class="p-hamburgerIcon">
+                            <li><a href="#"><img class="p-hamburgerIcon__instaglam" src="img/instaglam.png" alt="インスタグラムのアイコン"></a></li>
+                            <li><a href="#"><img class="p-hamburgerIcon__facebook" src="img/facebook.png" alt="フェイスブックのアイコン"></a></li>
+                            <li><a href="#"><img class="p-hamburgerIcon__Twitter" src="img/twitter.png" alt="ツイッターのアイコン"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-headerContents">
+                    <div class="p-headerTitle">
+                        <h1 class="p-headerTitle__text">YuMeCAFE</h1>
+                        <p class="p-headerTitle__textSub">～夢カフェ～</p>
+                    </div>
+                    <div class="p-headerMain">
+                        <p class="p-headerMain__textTop">
+                            YuMeCAFEは1947年（昭和22）年に建てられた古民家を
+                            リノベーションした古民家カフェです。
+                            この家に古くからあったモノたちをそのまま活かしています。
+                        </p>
+                        <p class="p-headerMain__textBottom">
+                            和の雰囲気をそのままに残した店内には、<br>
+                            小上がりスペースもあり、ゆっくりとくつろげます。
+                        </p>
+                    </div>
+                    <div class="c-headerScroll"><span>scroll</span></div>
+                </div>
+            </div>
+            <section class="l-top">
+                <ul class="l-topNav">
+                    <li class="l-topTab active"><p>HOME</p></li>
+                    <li><span>/</span></li>
+                    <li class="l-topTab"><p>STORY</p></li>
+                </ul>
+                <div class="l-topPanel">
+                    <div class="l-topPanel__wrap active">
+                        <div class="l-home">
+                            <h2 class="c-panelTitle">- HOME -</h2>
+                            <h2 class="l-home__title">どこか懐かしいレトロな空間、<br>雰囲気のある古民家カフェ</h2>
+                            <img class="l-home__img" src="img/home.png" alt="メイン画像">
+                            <div class="l-home__textSub">
+                                <p class="l-home__textSub__top">
+                                    ひとりでのんびりと時間を過ごしたいとき、<br>
+                                    お友達やカップルで落ち着いてお喋りしたいとき、
+                                </p>
+                                <p class="l-home__textSub__middle">
+                                    都会の喧騒から離れてゆったりとした時間を<br>
+                                    過ごしてみませんか。
+                                </p>
+                                <p class="l-home__textSub__bottom">
+                                    自家製の美味しいランチ、スイーツ、ドリンクを<br>
+                                    ゆっくりお楽しみいただけます。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-topPanel__wrap">
+                        <div class="l-story">
+                            <h2 class="c-panelTitle">- STORY -</h2>
+                            <ul class="p-storyTop">
+                                <li class="p-storyTop__img">
+                                    <img class="p-story__imgMain" src="img/story01.png" alt="店内の画像">
+                                </li>
+                                <li class="p-storyTop__text">
+                                    <h3 class="c-story__title">和の趣の中で、</h3>
+                                    <p class="c-story__text">心が『ホッ』と<br>息をつく</p>
+                                </li>
+                            </ul>
+                            <ul class="p-storyMiddle">
+                                <li class="p-storyMiddle__img">
+                                    <img class="p-story__imgMain" src="img/story02.png" alt="店内の画像">
+                                </li>
+                                <li class="p-storyMiddle__text">
+                                    <h3 class="c-story__title">親しい人と、</h3>
+                                    <p class="c-story__text">スイーツを食べたり、<br>おしゃべりしたり。</p>
+                                </li>
+                            </ul>
+                            <ul class="p-storyBottom">
+                                <li class="p-storyBottom__img">
+                                    <img class="p-story__imgMain" src="img/story03.png" alt="店内の画像">
+                                </li>
+                                <li class="p-storyBottom__text">
+                                    <h3 class="c-story__title">都会の</h3>
+                                    <h4 class="c-story__title02">喧騒を忘れ。</h4>
+                                    <p class="c-story__text">レトロを味わいながら<br>のんびりしたり、仕事をしたり。</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="l-news" id="news">
+            <h2 class="c-title__center">NEWS</h2>
+                <ul class="p-newsContents">
+                    <li class="p-newsContents__item09"><a href="#">
+                        <img class="p-newsContents__itemImg" src="img/news01.jpg" alt="09月のNEWS画像">
+                        <p class="p-newsContents__itemSP">YuMeCAFE</p>
+                        <p class="p-newsContents__itemText">【お知らせ】9月のおすすめ食材フェア</p>
+                        <p class="p-newsContents__itemDay">2022.09.29</p>
+                    </a></li>
+                    <li class="p-newsContents__item10"><a href="#">
+                        <img class="p-newsContents__itemImg" src="img/news02.jpg" alt="10月のNEWS画像">
+                        <p class="p-newsContents__itemSP">YuMeCAFE</p>
+                        <p class="p-newsContents__itemText">【期間限定】ハロウィン限定メニュー</p>
+                        <p class="p-newsContents__itemDay">2022.09.29</p>
+                    </a></li>
+                    <li class="p-newsContents__item11"><a href="#">
+                        <img class="p-newsContents__itemImg" src="img/news03.jpg" alt="11月のNEWS画像">
+                        <p class="p-newsContents__itemSP">YuMeCAFE</p>
+                        <p class="p-newsContents__itemText">【お知らせ】11月のおすすめ食材フェア</p>
+                        <p class="p-newsContents__itemDay">2022.09.29</p>
+                    </a></li>
+                </ul>
+                <a href="#" class="p-newsContents__bottom">VIEW MORE</a>
+            </section>
+            <section class="l-menuTop">
+                <img class="l-menuTop__img" src="img/menu.png" alt="ケーキの画像">
+                <ul class="l-menuTop__text">
+                    <li class="c-title__left">
+                        <h2>MENU</h2>
+                    </li>
+                    <li class="l-menuTop__textSub">
+                        <p>YuMeCAFEでは、無添加の食材を<br>使用したメニューをご用意しております。</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="l-main">
+                <ul class="l-mainNav">
+                    <li class="l-mainTab active"><p>SYSTEM</p></li>
+                    <li><span>/</span></li>
+                    <li class="l-mainTab"><p>FOOD</p></li>
+                    <li><span>/</span></li>
+                    <li class="l-mainTab"><p>COURSE</p></li>
+                    <li><span>/</span></li>
+                    <li class="l-mainTab"><p>MEMBER</p></li>
+                </ul>
+                <div class="l-mainPanel">
+                    <div class="l-mainPanel__wrap active">
+                        <div class="l-mainContents">
+                            <h2 class="c-panelTitle">- SYSTEM -</h2>
+                                <div class="p-systemFree">
+                                    <ul class="p-systemFree__item">
+                                        <li class="p-systemFree__itemImg">
+                                            <img src="img/book.png" alt="本のアイコン">
+                                        </li>
+                                        <li class="p-systemFree__itemText">
+                                            <p>フリー読書</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="p-systemFree__item">
+                                        <li class="p-systemFree__itemImg">
+                                            <img src="img/wifi.png" alt="Wi-Fiのアイコン">
+                                        </li>
+                                        <li class="p-systemFree__itemText">
+                                            <p>フリーWi-Fi</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="p-systemFree__item">
+                                        <li class="p-systemFree__itemImg">
+                                            <img src="img/power.png" alt="電源のアイコン">
+                                        </li>
+                                        <li class="p-systemFree__itemText">
+                                            <p>フリー電源</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="p-systemFree__item">
+                                        <li class="p-systemFree__itemImg">
+                                            <img src="img/coffee.png" alt="コーヒーカップのアイコン">
+                                        </li>
+                                        <li class="p-systemFree__itemText">
+                                            <p>フリードリンク</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="p-systemPlan">
+                                    <table class="p-systemPlan__table">
+                                        <tr class="c-table__header">
+                                            <td><br></td>
+                                            <th>フリードリンク</th>
+                                            <th>フリーアルコール</th>
+                                        </tr>
+                                            <tr class="c-table__1hour">
+                                            <th>１時間</th>
+                                            <td>¥1,000</td>
+                                            <td>¥1,500</td>
+                                        </tr>
+                                            <tr class="c-table__3hour">
+                                            <th>３時間</th>
+                                            <td>¥2,000</td>
+                                            <td>¥3,000</td>
+                                        </tr>
+                                        <tr class="c-table__1day">
+                                            <th>１日</th>
+                                            <td>¥3,000</td>
+                                            <td>¥4,000</td>
+                                        </tr>
+                                            <tr class="c-table__sofa">
+                                            <th>小上がり席</th>
+                                            <td colspan="3">+ ¥500</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="p-systemPlus">
+                                    <div class="p-systemPlus__title">
+                                        <h3 class="p-systemPlus__titleText">トースト or ケーキセット</h3>
+                                        <h3 class="p-systemPlus__titlePrice">+ ¥ 500</h3>
+                                    </div>
+                                <div class="p-systemPlus__text">
+                                    <ul class="p-systemPlus__textItem">
+                                        <li class="p-systemPlus__textTitle"><p>チーズトースト</p></li>
+                                        <li class="p-systemPlus__textComment"><p>サクとろ食感に夢中。とろ～り絶品</p></li>
+                                    </ul>
+                                    <ul class="p-systemPlus__textItem">
+                                        <li class="p-systemPlus__textTitle"><p>ラピュタトースト</p></li>
+                                        <li class="p-systemPlus__textComment"><p>トロトロ卵でジブリの名シーンを完全再現！</p></li>
+                                    </ul>
+                                    <ul class="p-systemPlus__textItem">
+                                        <li class="p-systemPlus__textTitle"><p>ホットチーズサンド</p></li>
+                                        <li class="p-systemPlus__textComment"><p>カリッとろ～、お好みで蜂蜜も</p></li>
+                                    </ul>
+                                    <ul class="p-systemPlus__textItem">
+                                        <li class="p-systemPlus__textTitle"><p>カステラ</p></li>
+                                        <li class="p-systemPlus__textComment"><p>ふっくら、しっとりした独特の食感</p></li>
+                                    </ul>
+                                    <ul class="p-systemPlus__textItem">
+                                        <li class="p-systemPlus__textTitle"><p>チョコレートケーキ</p></li>
+                                        <li class="p-systemPlus__textComment"><p>ふわっととろける濃厚ショコラ</p></li>
+                                    </ul>
+                                    <ul class="p-systemPlus__textItem">
+                                        <li class="p-systemPlus__textTitle"><p>シフォンケーキ</p></li>
+                                        <li class="p-systemPlus__textComment"><p>素材の美味しさ引き立つプレーン</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="p-systemPlus__bottom">※価格は全て税込表記です。</p>
+                        </div>
+                    </div>
+                    <div class="l-mainPanel__wrap">
+                        <div class="l-mainContents">
+                            <h2 class="c-panelTitle">- FOOD -</h2>
+                            <div class="p-foodContents">
+                                <div class="p-foodContents__left">
+                                    <ul class="p-foodContents__item">
+                                        <li class="p-foodContents__textBox">
+                                            <h4 class="p-foodContents__itemName">ミックスナッツ</h4>
+                                            <p class="p-foodContents__itemComment">テキストテキストテキスト<br>テキストテキストテキスト</p>
+                                        </li>
+                                        <li class="p-foodContents__itemBox">
+                                            <p class="p-foodContents__itemPrice">¥300</p>
+                                            <img class="p-foodContents__itemImg" src="img/Nuts.jpg" alt="">
+                                        </li>
+                                    </ul>
+                                    <ul class="p-foodContents__item">
+                                        <li class="p-foodContents__textBox">
+                                            <h4 class="p-foodContents__itemName">ポテトフライ</h4>
+                                            <p class="p-foodContents__itemComment">テキストテキストテキスト<br>テキストテキストテキスト</p>
+                                        </li>
+                                        <li class="p-foodContents__itemBox">
+                                            <p class="p-foodContents__itemPrice">¥300</p>
+                                            <img class="p-foodContents__itemImg" src="img/potato.jpg" alt="">
+                                        </li>
+                                    </ul>
+                                    <ul class="p-foodContents__item">
+                                        <li class="p-foodContents__textBox">
+                                            <h4 class="p-foodContents__itemName">フレンチトースト</h4>
+                                            <p class="p-foodContents__itemComment">テキストテキストテキスト<br>テキストテキストテキスト</p>
+                                        </li>
+                                        <li class="p-foodContents__itemBox">
+                                            <p class="p-foodContents__itemPrice">¥300</p>
+                                            <img class="p-foodContents__itemImg" src="img/frenchtoast.jpg" alt="">
+                                        </li>
+                                    </ul>
+                                    <ul class="p-foodContents__item">
+                                        <li class="p-foodContents__textBox">
+                                            <h4 class="p-foodContents__itemName">ラピュタトースト</h4>
+                                            <p class="p-foodContents__itemComment">テキストテキストテキスト<br>テキストテキストテキスト</p>
+                                        </li>
+                                        <li class="p-foodContents__itemBox">
+                                            <p class="p-foodContents__itemPrice">¥300</p>
+                                            <img class="p-foodContents__itemImg" src="img/raputa.jpeg" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="p-foodContents__right">
+                                    <ul class="p-foodContents__item">
+                                        <li class="p-foodContents__textBox">
+                                            <h4 class="p-foodContents__itemName">チョコレート</h4>
+                                            <p class="p-foodContents__itemComment">テキストテキストテキスト<br>テキストテキストテキスト</p>
+                                        </li>
+                                        <li class="p-foodContents__itemBox">
+                                            <p class="p-foodContents__itemPrice">¥200</p>
+                                            <img class="p-foodContents__itemImg" src="img/chocolate.jpg" alt="">
+                                        </li>
+                                    </ul>
+                                    <ul class="p-foodContents__item">
+                                        <li class="p-foodContents__textBox">
+                                            <h4 class="p-foodContents__itemName">シフォンケーキ</h4>
+                                            <p class="p-foodContents__itemComment">テキストテキストテキスト<br>テキストテキストテキスト</p>
+                                        </li>
+                                        <li class="p-foodContents__itemBox">
+                                            <p class="p-foodContents__itemPrice">¥300</p>
+                                            <img class="p-foodContents__itemImg" src="img/shifon.jpeg" alt="">
+                                        </li>
+                                    </ul>
+                                    <ul class="p-foodContents__item">
+                                        <li class="p-foodContents__textBox">
+                                            <h4 class="p-foodContents__itemName">チーズケーキ</h4>
+                                            <p class="p-foodContents__itemComment">テキストテキストテキスト<br>テキストテキストテキスト</p>
+                                        </li>
+                                        <li class="p-foodContents__itemBox">
+                                            <p class="p-foodContents__itemPrice">¥400</p>
+                                            <img class="p-foodContents__itemImg" src="img/cheese.jpg" alt="">
+                                        </li>
+                                    </ul>
+                                    <ul class="p-foodContents__item">
+                                        <li class="p-foodContents__textBox">
+                                            <h4 class="p-foodContents__itemName">アイスクリーム</h4>
+                                            <p class="p-foodContents__itemComment">テキストテキストテキスト<br>テキストテキストテキスト</p>
+                                        </li>
+                                        <li class="p-foodContents__itemBox">
+                                            <p class="p-foodContents__itemPrice">¥300</p>
+                                            <img class="p-foodContents__itemImg" src="img/icecream.jpg" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="p-foodContents__bottom">※価格は全て税込表記です。</p>
+                        </div>
+                    </div>
+                    <div class="l-mainPanel__wrap">
+                        <div class="l-mainContents">
+                            <h2 class="c-panelTitle">- COURSE -</h2>
+                            <h3 class="l-course__titleSub">”YuMeCAFE和み”コース ¥　5000</h3>
+                            <ul class="p-courseContents">
+                                <li class="p-courseContents__item">
+                                    <h4 class="p-courseContents__itemFirst">アラカルトの盛り合わせ</h4>
+                                </li>
+                                <li class="p-courseContents__item">
+                                    <h4 class="p-courseContents__itemSalad">本日のサラダ</h4>
+                                </li>
+                                <li class="p-courseContents__item">
+                                    <h4 class="p-courseContents__item">ポテトフライ</h4>
+                                </li>
+                                <li class="p-courseContents__item">
+                                    <h4 class="p-courseContents__itemMain">お好みのメイン料理</h4>
+                                    <p class="p-courseContents__itemPs">（本日のお魚料理/本日のお肉料理）</p>
+                                </li>
+                                <li class="p-courseContents__item">
+                                    <h4 class="p-courseContents__itemPasta">お好みのパスタ</h4>
+                                    <p class="p-courseContents__itemPs">（サーモンと舞茸のカルボナーラ/<br>揚げなすとベーコンの和風おろし）</p>
+                                </li>
+                                <li class="p-courseContents__item">
+                                    <h4 class="p-courseContents__itemCake">お好みのケーキ<h4>
+                                    <p class="p-courseContents__itemPs">（チーズケーキ/チョコレートケーキ/シフォンケーキ）</p>
+                                </li>
+                                <li class="p-courseContents__item">
+                                    <h3 class="p-courseContents__itemPlus">+</h3>
+                                </li>
+                                <li class="p-courseContents__item">
+                                    <h4 class="p-courseContents__itemDrink">フリードリンク　2h</h4>
+                                    <p class="p-courseContents__itemPs">（Cocktail/Whisky/Beer/Wine/Non alchol）</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="l-mainPanel__wrap">
+                        <div class="l-mainContents">
+                            <h2 class="c-panelTitle">- MEMBER -</h2>
+                            <ul class="p-memberContents">
+                                <li class="p-memberContents__text">
+                                    <p class="p-memberContents__textBox1">
+                                    YuMeCAFEは<br>
+                                    YuMeCAFEを好きでいてくれる方に快適な空間を提供するために<br>
+                                    準会員制とさせていただいています。<br>
+                                    ※会員ではない方もご利用いただけます。
+                                    </p>
+                                </li>
+                                <li class="p-memberContents__text">
+                                    <p class="p-memberContents__textBox2">会員特典は</p>
+                                </li>
+                                <li class="p-memberContents__text">
+                                    <p class="p-memberContents__textBox3">
+                                    ・お会計から\500割引<br>
+                                    ・入り口ドアを開けられるカードキー<br>
+                                    ・オリジナルスイーツの提供
+                                    </p>
+                                </li>
+                                <li class="p-memberContents__text">
+                                    <p class="p-memberContents__textBox4">です。</p>
+                                </li>
+                                <li class="p-memberContents__text">
+                                    <p class="p-memberContents__textBox5">
+                                    会員費は \11,000/1年、\22,000/永久 になります。<br>
+                                    新規会員をご検討いただける方はお気軽にスタッフまでお声がけください。
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="l-access" id="access">
+                <div class="p-accessMain">
+                    <h2 class="c-title__left">ACCESS</h2>
+                    <div class="p-accessMain__text">
+                        <p class="p-accessMain__textAddress">〒156-0052  東京都世田谷区経堂2丁目1<br>（経堂駅から徒歩0分）</p>
+                        <p class="p-accessMain__textWay1">・アクセス①<br>　小田急線経堂駅出口直結<br>　エレベーターで2Fへ</p>
+                        <p class="p-accessMain__textWay2">・アクセス②<br>　経堂駅から約0m<br>　公園隣の経堂駅の看板があるビル</p>
+                        <p class="p-accessMain__textTime">営業時間　　11:00  -  22:00</p>
+                        <p class="p-accessMain__textTel">電話番号　　03-xxxx-xxxx</p>
+                    </div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242
+                .0472299115477!2d139.6346172148179!3d35.65120798020139!2m3!1f0!2f0!3f0!
+                3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f3963e5f12c3%3A0xda01a62e6034083!
+                2z57WM5aCC6aeF!5e0!3m2!1sja!2sjp!4v1666757743217!5m2!1sja!2sjp"
+                width="500px" height="550px" style="border:0;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <section class="l-contact" id="contact">
+                <h2 class="c-title__center">CONTACT</h2>
+                <p class="l-contact__text">下記のフォームからご連絡ください。<br>こちらからご連絡させていただきます。</p>
+                <p class="l-contact__subtext">ご予約の方は【ご利用日、ご来店時間、ご利用人数】をご記入ください。<br>
+                ご予約は前日までにお願いします。当日のご予約はお電話でご連絡ください。</p>
+                <div class="p-contactContents">
+                    <div class="p-contactCheck">
+                        <div class="p-contactCheck__place">
+                            <p class="c-contact__CheckLead">お問い合わせの場所</p>
+                            <ul class="p-contactCheck__placeList">
+                                <li class="p-contactCheck__placeItem">
+                                    <input type="radio" id="01-A" name="radio1">
+                                    <label for="01-A">小上がりスペース</label>
+                                </li>
+                                <li class="p-contactCheck__placeItem">
+                                    <input type="radio" id="01-B" name="radio1">
+                                    <label for="01-B">広めのお席</label>
+                                </li>
+                                <li class="p-contactCheck__placeItem">
+                                    <input type="radio" id="01-C" name="radio1">
+                                    <label for="01-C">その他</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-contactCheck__type">
+                            <p class="c-contact__CheckLead">お問い合わせの種別</p>
+                            <ul class="p-contactCheck__typeList">
+                                <li class="p-contactCheck__typeItem">
+                                    <input type="radio" id="02-A" name="radio2">
+                                    <label for="02-A">予約</label>
+                                </li>
+                                <li class="p-contactCheck__typeItem">
+                                    <input type="radio" id="02-B" name="radio2">
+                                    <label for="02-B">取材</label>
+                                </li>
+                                <li class="p-contactCheck__typeItem">
+                                    <input type="radio" id="02-C" name="radio2">
+                                    <label for="02-C">貸切</label>
+                                </li>
+                                <li class="p-contactCheck__typeItem">
+                                    <input type="radio" id="02-D" name="radio2">
+                                    <label for="02-D">撮影</label>
+                                </li>
+                                <li class="p-contactCheck__typeItem">
+                                    <input type="radio" id="02-E" name="radio2">
+                                    <label for="02-E">寄贈</label>
+                                </li>
+                                <li class="p-contactCheck__typeItem">
+                                    <input type="radio" id="02-F" name="radio2">
+                                    <label for="02-F">その他</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="p-contactForm">
+                        <li class="p-contactForm__name">
+                            <p class="p-contactForm__nameLead">名前</p>
+                            <input type="text" class="name" placeholder="山田太郎">
+                        </li>
+                        <li class="p-contactForm__mail">
+                            <p class="p-contactForm__mailLead">メールアドレス</p>
+                            <input type="email" class="email" placeholder="info@yumecafe.com">
+                        </li>
+                        <li class="p-contactForm__tel">
+                            <p class="p-contactForm__telLead">電話番号</p>
+                            <input type="tel" class="tel" placeholder="03-0000-0000">
+                        </li>
+                        <li class="p-contactForm__text">
+                            <p class="p-contactForm__textLead">お問い合わせ内容</p>
+                            <textarea class="message" placeholder="メッセージを記入してください。"></textarea>
+                        </li>
+                    </ul>
+                </div>
+                <div class="c-contactButton">
+                    <input type="submit" value="送信する" class="sendButton">
+                </div>
+            </section>
+            <section class="l-line">
+                <img class="l-line__imgPC" src="img/qrcode.jpeg">
+                <img class="l-line__imgSP" src="img/icon.png">
+                <p class="l-line__textPC">LINE＠友達追加方法<br>QRコードを読み取ると友達追加できます。</p>
+                <p class="l-line__textSP">LINE＠友達追加方法<br>上記ボタンを押すと友達追加できます。</p>
+            </section>
+            <div class="l-footer">
+                <a href="#">
+                    <div class="p-footerTitle">
+                        <h1 class="p-footerTitle__text">YuMeCAFE</h1>
+                        <p class="p-footerTitle__textSub">～夢カフェ～</p>
+                    </div>
+                </a>
+                <p class="p-footerTel">TEL:03-xxxx-xxxx</p>
+                <div class="p-footerLink">
+                    <a href="#news"><p class="p-footerLink__news">NEWS</p></a>
+                    <p class="p-footerLink__slash">/</p>
+                    <a href="#access"><p class="p-footerLink__access">ACCESS</p></a>
+                    <p class="p-footerLink__slash">/</p>
+                    <a href="#contact"><p class="p-footerLink__contact">CONTACT</p></a>
+                </div>
+                <p class="p-footerName">&copy;Mei Kawanishi</p>
+            </div>
+            <script type="text/javascript" src="js/jquery.js"></script>
+            <script type="text/javascript">
+                //header:fadeIn
+                $(window).load(function() {
+                    $('.p-headerContents').delay(100).fadeIn(1000);
+                });
+                //hamburger
+                $('.c-navBtn').click(function(){
+                    $('.l-hamburger').toggleClass('active');
+                });
+                $('.c-navBtn').click(function () {
+                    $('.c-navBtn').toggleClass('closed');
+                });
+                $('.p-hamburgerText li').click(function () {
+                    $('.l-hamburger').removeClass('active'),
+                    $('.c-navBtn').toggleClass('closed');
+                });
+                //home:fadeIn
+                $(function () {
+                $(window).scroll(function () {
+                    const wHeight = $(window).height();
+                    const scrollAmount = $(window).scrollTop();
+                    $('.l-home__img').each(function () {
+                        const targetPosition = $(this).offset().top;
+                        if(scrollAmount > targetPosition - wHeight + 70) {
+                            $(this).addClass("fadeInDown");
+                        }
+                    });
+                });
+                });
+                //story01:fadeIn
+                $(function () {
+                $(window).scroll(function () {
+                    const wHeight = $(window).height();
+                    const scrollAmount = $(window).scrollTop();
+                    $('.p-storyTop__img').each(function () {
+                        const targetPosition = $(this).offset().top;
+                        if(scrollAmount > targetPosition - wHeight + 70) {
+                            $(this).addClass("fadeInDown");
+                        }
+                    });
+                });
+                });
+                //story02:fadeIn
+                $(function () {
+                $(window).scroll(function () {
+                    const wHeight = $(window).height();
+                    const scrollAmount = $(window).scrollTop();
+                    $('.p-storyMiddle__img').each(function () {
+                        const targetPosition = $(this).offset().top;
+                        if(scrollAmount > targetPosition - wHeight + 200) {
+                            $(this).addClass("fadeInDown");
+                        }
+                    });
+                });
+                });
+                //story03:fadeIn
+                $(function () {
+                $(window).scroll(function () {
+                    const wHeight = $(window).height();
+                    const scrollAmount = $(window).scrollTop();
+                    $('.p-storyBottom__img').each(function () {
+                        const targetPosition = $(this).offset().top;
+                        if(scrollAmount > targetPosition - wHeight + 200) {
+                            $(this).addClass("fadeInDown");
+                        }
+                    });
+                });
+                });
+                //topNav:fadeIn
+                $(function () {
+                $(window).scroll(function () {
+                    const wHeight = $(window).height();
+                    const scrollAmount = $(window).scrollTop();
+                    $('.l-topNav').each(function () {
+                        const targetPosition = $(this).offset().top;
+                        if(scrollAmount > targetPosition - wHeight + 45) {
+                            $(this).addClass("fadeInDown");
+                        }
+                    });
+                });
+                });
+                //mainNav:fadeIn
+                $(function () {
+                $(window).scroll(function () {
+                    const wHeight = $(window).height();
+                    const scrollAmount = $(window).scrollTop();
+                    $('.l-mainNav').each(function () {
+                        const targetPosition = $(this).offset().top;
+                        if(scrollAmount > targetPosition - wHeight + 30) {
+                            $(this).addClass("fadeInDown");
+                        }
+                    });
+                });
+                });
+                // topTab:tab
+                $(function() {
+                $('.l-topTab').click(function() {
+                    $('.l-topTab, .l-topPanel__wrap').removeClass('active');
+                    $(this).addClass('active');
+                    var index = $('.l-topTab').index(this);
+                    $('.l-topPanel__wrap').eq(index).addClass('active');
+                });
+                });
+                // mainTab:tab
+                $(function() {
+                $('.l-mainTab').click(function() {
+                    $('.l-mainTab, .l-mainPanel__wrap').removeClass('active');
+                    $(this).addClass('active');
+                    var index = $('.l-mainTab').index(this);
+                    $('.l-mainPanel__wrap').eq(index).addClass('active');
+                });
+                });
+                // loading
+                $(function() {
+                    var loadCount = 0,
+                        imgLength = $("img").size();
+                    $("img").each(function() {
+                        var src = $(this).attr("src");
+                        $("<img>")
+                        .attr("src", src)
+                        .load(function() {
+                            loadCount++;
+                        });
+                    });
+                    var timer = setInterval(function() {
+                        $(".c-loadingBar").css({
+                            "width": (loadCount / imgLength) * 100 + "%"
+                        });
+                        if((loadCount / imgLength) * 100 == 100){
+                            clearInterval(timer);
+                            $(".c-loadingBar").delay(200).animate({
+                                "opacity": 0
+                            }, 200);
+                        }
+                    }, 5);
+                });
+            </script>
+        </div>
+        <div class="c-loadingBar"></div>
+    </body>
+</html>
