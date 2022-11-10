@@ -4,6 +4,12 @@ a{
   text-decoration: none;
 }
 
+body.fixed {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
 .l-body{
   min-width: 960px;
   font-family: YuMincho,'Yu Mincho', serif;
@@ -13,9 +19,9 @@ a{
   width: 100%;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .l-body{
-    min-width: 375px;
+    min-width: 400px;
   }
 }
 
@@ -27,22 +33,34 @@ a{
 
 /* ヘッダー */
 .l-header{
-  background-image: url(./../img/top.jpg);
   width: 100%;
-  height: 90vh;
-  background-size: cover;
+  height: 95vh;
   position: relative;
 }
 
-@media screen and (max-width: 375px) {
-  .l-header{
+.p-headerImg{
+  width: 100%;
+  position: relative;
+}
+
+.p-headerImg img{
+  width:100%;
+  height: 95vh;
+  object-fit: cover;
+  position: absolute;
+}
+
+@media screen and (max-width: 400px) {
+  .p-headerImg img{
     height: 95vh;
   }
 }
 
 /* ヘッダーナビ */
 .p-nav{
-  padding: 6vh 2vw 0 0;
+  position: absolute;
+  top: 50px;
+  right: 50px;
 }
 
 .p-nav__icon{
@@ -54,7 +72,11 @@ a{
   margin-left: 1.5vw;
 }
 
-.p-nav__icon li:hover img{
+.p-nav__iconItem{
+  color: #fff;
+}
+
+.p-nav__icon li a:hover{
   opacity: 0.5;
 }
 
@@ -62,7 +84,7 @@ a{
   margin-left: 0;
 }
 
-.p-nav__icon img{
+.p-nav__icon i{
   width: 35px;
   display: block;
   opacity: 1;
@@ -72,15 +94,11 @@ a{
 .p-nav__text{
   display: flex;
   justify-content: flex-end;
-  margin-top: 2.5vh;
+  padding-top: 20px;
 }
 
 .p-nav__text li{
   margin-left: 3.5vw;
-}
-
-.p-nav__icon li :first-child{
-  margin-left: 0;
 }
 
 .p-nav__text a{
@@ -88,14 +106,25 @@ a{
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 3.8px;
+  position: relative;
   display: inline-block;
-  transition: .3s;
-  transform: scale(1);
 }
 
-.p-nav__text a:hover {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
+.p-nav__text a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .4s;
+}
+
+.p-nav__text a:hover::after {
+  transform: scale(1, 1);
 }
 
 .l-hamburger{
@@ -107,7 +136,7 @@ a{
 }
 
 /* ハンバーガーボタン */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .c-navBtn{
     display: block;
     position: fixed;
@@ -130,12 +159,15 @@ a{
     height: 2px;
   }
 
+  .c-navBtn .c-navBtn__bar span{
+    background-color: #fff;
+  }
+
   .c-navBtn .c-navBtn-bar01{
     position: absolute;
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #fff;
     transition: all .15s linear;
   }
 
@@ -144,7 +176,6 @@ a{
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #fff;
     transition: all .15s linear;
     transform: translateY(-8px) rotate(0deg);
   }
@@ -154,7 +185,6 @@ a{
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #fff;
     transition: all .15s linear;
     transform: translateY(8px) rotate(0deg);
   }
@@ -171,6 +201,10 @@ a{
     transform: translateY(0) rotate(-45deg);
   }
 
+  .c-navBtn__bar span.change-color{
+    background-color: #000;
+  }
+
 /* ハンバーガーメニュー */
   .p-nav{
     display: none;
@@ -179,6 +213,7 @@ a{
   .l-hamburger{
     display: block;
     width: 100%;
+    height: 95vh;
     background-color: #d3d3d3;
     padding: 20vh 0 22vh 0;
     position: fixed;
@@ -205,14 +240,25 @@ a{
     font-weight: bold;
     letter-spacing: 2px;
     color: #000;
+    position: relative;
     display: inline-block;
-    transition: .3s;
-    transform: scale(1);
   }
 
-  .p-hamburgerText li a:hover{
-    cursor: pointer;
-    transform: scale(1.3);
+  .p-hamburgerText li a::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .4s;
+  }
+
+  .p-hamburgerText li  a:hover::after {
+    transform: scale(1, 1);
   }
 
   .p-hamburgerIcon{
@@ -225,7 +271,7 @@ a{
   }
 
   .p-hamburgerIcon li:nth-child(2){
-    margin: 0 8vw;
+    margin: 0 2vw;
   }
 
   .p-hamburgerIcon li a:hover{
@@ -233,8 +279,9 @@ a{
     transition:0.3s;
   }
 
-  .p-hamburgerIcon li img{
-    width: 35px;
+  .p-hamburgerIcon__item{
+    color: #000;
+    width: 60px;
     text-align: center;
   }
 }
@@ -242,24 +289,21 @@ a{
 /* ヘッダーテキスト */
 .p-headerContents{
   display: none;
-  width: 740px;
-  padding: 14vh 0 0 14vw;
+  position: relative;
+  top: 30vh;
+  left: 13%;
 }
 
-.p-headerTitle{
-  font-family: 'Comic Sans MS','American Typewriter','Futura','cursive';
+.c-title__img{
+  width: 260px;
 }
 
-.p-headerTitle__text{
-  color: #fff;
-  font-size: 64px;
+.p-headerMain{
+  display: block;
 }
 
-.p-headerTitle__textSub{
-  color: #fff;
-  font-size: 14px;
-  margin-top: 0.5vh;
-  letter-spacing: 1px;
+.p-headerMain__sp{
+  display: none;
 }
 
 .p-headerMain p{
@@ -271,39 +315,49 @@ a{
   line-height: 1.8;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
+  .c-title__img{
+    width: 200px;
+  }
+
   .p-headerContents{
     width: 340px;
-    padding: 30vh 0 0 12.5vw;
   }
 
-  .p-headerTitle__text{
-    font-size: 40px;
+  .p-headerMain__sp{
+    display: block;
   }
 
-  .p-headerTitle__textSub{
-    margin-top: 1vh;
-    font-size: 10px;
-}
+  .p-headerMain{
+    display: none;
+  }
 
-  .p-headerMain p{
+  .p-headerMain__sp p{
     font-size: 12px;
     letter-spacing: 3px;
-    margin-top: 4vh;
+    margin-top: 3vh;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.8;
   }
 }
 
 /* スクロール */
+.c-headerScroll__wrap{
+  width: 100%;
+  position: relative;
+}
+
 .c-headerScroll{
   position: absolute;
-  left: 48%;
-  bottom: 0;
-  height: 0.5vh;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
 }
 
 .c-headerScroll span{
   position: absolute;
-	left: 0;
+	left: -25px;
 	bottom: 70px;
 	color: #fff;
 	font-size: 16px;
@@ -314,7 +368,7 @@ a{
 .c-headerScroll::after{
 	content: "";
 	position: absolute;
-  left: 25px;
+  left: 0;
 	bottom: 60px;
 	width: 0.5px;
 	background: #fff;
@@ -339,11 +393,9 @@ a{
 	}
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .c-headerScroll{
-    top: 97vh;
-    left: 45%;
-    height: 4vw;
+    top: 95vh;
   }
 
   .c-headerScroll span{
@@ -357,7 +409,7 @@ a{
   cursor: pointer;
   background-color: #fafafa;
   justify-content: center;
-  padding: 5vh;
+  padding: 50px;
   opacity: 0;
 }
 
@@ -380,32 +432,41 @@ a{
   width: 15vw;
   padding: 2px;
   text-align: center;
+  position: relative;
 }
 
-/*メインタブ下線*/
+.l-topTab.active::after{
+  content: '';
+  position: absolute;
+  top: 3.2vh;
+  left: 40.5%;
+  width: 15%;
+  height: 1px;
+  background:#000;
+}
+
+.l-topTab:hover::after{
+  content: '';
+  position: absolute;
+  top: 3.2vh;
+  left: 40.5%;
+  width: 15%;
+  height: 1px;
+  background:#000;
+}
+
+.l-topTab.active::after,
+.l-topTab:hover::after
+{
+  transform: scale(1, 1)
+}
+
 .l-topNav p:hover{
   font-weight: bold;
 }
 
-.l-topNav li p::after{
-  content: '';
-  position: absolute;
-  top: 3vh;
-  left: 34%;
-  width: 30%;
-  height: 2px;
-  background:#000;
-  transition: all .3s;
-  transform: scale(0, 1);
-  transform-origin: center top;
-}
+@media screen and (max-width: 400px) {
 
-.l-topPanel__wrap.active::after,
-.l-topNav li p:hover::after{
-  transform: scale(1, 1)
-}
-
-@media screen and (max-width: 375px) {
   .l-topNav{
     padding: 5vh 0;
   }
@@ -486,7 +547,7 @@ a{
   margin-top: 3vh;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .l-home{
     padding: 5vh 0;
   }
@@ -606,7 +667,7 @@ a{
   margin-right: 70px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .l-story{
     padding: 5vh 0;
   }
@@ -688,7 +749,7 @@ a{
   left: 4.2%;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-storyMiddle__img{
     margin: 100px 0 0 0;
     text-align: right;
@@ -737,7 +798,7 @@ a{
   margin: 5vh 2vw 0 0;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-storyBottom__img{
     margin: 100px 0 0 0;
   }
@@ -799,7 +860,7 @@ a{
   padding: 9vh 0;
 }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 400px) {
     .l-news{
       padding: 6vh 0 6vh 0;
     }
@@ -809,7 +870,7 @@ a{
 .c-title__center{
   font-size: 28px;
   letter-spacing: 2px;
-  margin-bottom: 16vh;
+  margin-bottom: 10vh;
   text-align: center;
   position: relative;
 }
@@ -834,7 +895,7 @@ a{
   margin: 0 auto;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .c-title__center{
     font-size: 20px;
     letter-spacing: 2.5px;
@@ -850,7 +911,7 @@ a{
 /* SPニューススクロール */
 
   .p-newsContents{
-    width: 315px;
+    width: 80%;
     margin: auto;
     overflow-x: scroll;
     white-space: nowrap;
@@ -921,27 +982,24 @@ margin-left: 1vw;
   text-align: right;
 }
 
+.p-newsContents__bottomText{
+  max-width: 870px;
+  text-align: end;
+  padding-top: 7vh;
+  margin: 0 auto;
+}
+
 .p-newsContents__bottom{
-  width: 90%;
   font-size: 10px;
   letter-spacing: 2px;
-  text-align: end;
-  margin-top: 7vh;
+  margin-top: 7vh 0vw 0 0;
   position: relative;
   color: #000;
   display: inline-block;
+  outline: none;
 }
 
-.p-newsContents__bottom:hover{
-  animation: zoom .3s;
-}
-@keyframes zoom{
-	50%{
-		transform: scale(1.05);
-	}
-}
-
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-newsContents__item09,
   .p-newsContents__item10{
     margin-right: 12px;
@@ -977,39 +1035,63 @@ margin-left: 1vw;
     font-size: 11px;
   }
 
-  .p-newsContents__bottom {
-    width: 320px;
-    letter-spacing: 3.8px;
-    margin-top: 6vh;
-    font-size: 11px;
+  .p-newsContents__bottomText{
+      max-width: 300px;
+  }
+
+  .p-newsContents__bottom{
+    letter-spacing: 3px;
+    display: inline-block;
+    outline: none;
   }
 }
 
 /* 矢印 */
+
 .p-newsContents__bottom::before{
-  content: "";
+  content: '';
   position: absolute;
-  top: 10px;
-  right: -25px;
-  border-width: 0 1px 1px 0;
-  border-style: solid;
-  border-color: transparent #444 #444 transparent;
-  -moz-transform: skewX(47deg);
-  -ms-transform: skewX(47deg);
-  -webkit-transform: skewX(47deg);
-  transform: skewX(47deg);
-  -moz-transform-origin: bottom left;
-  -ms-transform-origin: bottom left;
-  -webkit-transform-origin: bottom left;
-  transform-origin: bottom left;
-  width: 110px;
-  height: 8px;
+  bottom: -8px;
+  left: -18%;
+  width: 140%;
+  height: 1px;
+  background: #444;
+  transition: all .3s;
 }
 
-@media screen and (max-width: 375px) {
+.p-newsContents__bottom::after{
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  right: -17px;
+  width: 15px;
+  height: 1px;
+  background: #444;
+  transform: rotate(35deg);
+  transition: all .3s;
+}
+
+.p-newsContents__bottom:hover::before{
+  left:20%;
+}
+
+.p-newsContents__bottom:hover::after{
+  right:-60%;
+}
+
+@media screen and (max-width: 400px) {
   .p-newsContents__bottom::before{
-    top: 8px;
-    right: -12px;
+    bottom: -9px;
+    left: -8%;
+    width: 130%;
+    height: 0.5px;
+  }
+
+  .p-newsContents__bottom::after {
+    bottom: -5px;
+    right: -22px;
+    width: 15px;
+    height: 0.5px;
   }
 }
 
@@ -1046,7 +1128,7 @@ margin-left: 1vw;
 }
 
 /* メニュートップSP */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .l-menuTop{
     display: none;
     width: 100%;
@@ -1098,7 +1180,38 @@ margin-left: 1vw;
   width: 15vw;
   padding: 2px;
   text-align: center;
+  position: relative;
 }
+
+.l-mainTab.active::after{
+  content: '';
+  position: absolute;
+  top: 3.3vh;
+  left: 40.5%;
+  width: 15%;
+  height: 1px;
+  background:#000;
+}
+
+.l-mainTab:hover::after{
+  content: '';
+  position: absolute;
+  top: 3.3vh;
+  left: 40.5%;
+  width: 15%;
+  height: 1px;
+  background:#000;
+}
+
+.l-mainNav p:hover{
+  font-weight: bold;
+}
+
+.l-mainTab.active::after,
+.l-mainTab:hover::after{
+  transform: scale(1, 1)
+}
+
 
 .l-mainPanel__wrap{
   display: none;
@@ -1109,29 +1222,8 @@ margin-left: 1vw;
 }
 
 /*メインタブ下線*/
-.l-mainNav p:hover{
-  font-weight: bold;
-}
 
-.l-mainNav li p::after{
-  content: '';
-  position: absolute;
-  top: 3vh;
-  left: 34%;
-  width: 30%;
-  height: 2px;
-  background:#000;
-  transition: all .3s;
-  transform: scale(0, 1);
-  transform-origin: center top;
-}
-
-.l-mainPanel__wrap.active::after,
-.l-mainNav li p:hover::after{
-  transform: scale(1, 1)
-}
-
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .l-mainNav{
     justify-content: left;
     width: 100%;
@@ -1158,6 +1250,17 @@ margin-left: 1vw;
     padding: 2px;
     text-align: center;
   }
+
+  .l-mainTab.active::after{
+    top: 3.3vh;
+    left: 40%;
+  }
+
+  .l-mainNav li p::after{
+    top: 3vh;
+    left: 40%;
+    height: 1px;
+  }
 }
 
 /*メイン*/
@@ -1175,7 +1278,7 @@ margin-left: 1vw;
   padding: 0.5vh 0;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .l-mainPanel__wrap.active{
     padding: 5vh 0;
     background-color: #fff;
@@ -1206,7 +1309,7 @@ margin-left: 1vw;
   text-align: center;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .l-mainPanel__wrap{
     width: 100%;
     padding: 5vh 0;
@@ -1253,7 +1356,7 @@ margin-left: 1vw;
   padding-bottom: 2vh;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-systemFree{
     padding: 3vh 0 2vh 0;
   }
@@ -1351,7 +1454,7 @@ margin-left: 1vw;
   background-color: #eee;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-systemPlan__table{
     border-spacing: 4px;
   }
@@ -1463,7 +1566,7 @@ margin-left: 1vw;
   margin: 0 auto;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-systemPlus{
     width: 265px;
     padding: 2vh 0;
@@ -1590,7 +1693,7 @@ margin-left: 1vw;
     margin: 0 auto;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-foodContents{
     width: 80%;
     display: block;
@@ -1648,11 +1751,11 @@ margin-left: 1vw;
   font-weight: bold;
   letter-spacing: 2px;
   text-align: center;
-  padding: 6vh 0 10vh 0;
+  padding: 7vh 0;
 }
 
 .p-courseContents li{
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
 
 .p-courseContents li:first-child{
@@ -1673,17 +1776,17 @@ margin-left: 1vw;
 .p-courseContents__item p{
   text-align: center;
   font-size: 14px;
-  margin-top: 3vh;
+  margin-top: 1.5vh;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .l-course__titleSub{
     font-size: 14px;
-    padding: 6vh 0 5vh 0;
+    padding: 5vh 0;
   }
 
   .p-courseContents li{
-    padding-top: 8vh;
+    padding-top: 5vh;
   }
 
   .p-courseContents__item h4{
@@ -1719,7 +1822,7 @@ margin-left: 1vw;
   line-height: 2.5;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-memberContents{
     width: 80%;
     padding-top: 5vh;
@@ -1736,15 +1839,18 @@ margin-left: 1vw;
 
 /* アクセス */
 .l-access{
-  width: 100%;
-  padding: 9vh 0;
-  background-color: #fafafa;
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    background-color: #fafafa;
+    margin: 9vh auto;
+    position: relative;
+    padding: 9vh 2vw;
 }
 
 .p-accessMain{
-  margin: 8vh 0 0 70px;
+    padding-top: 4vh;
+    background-color: #fafafa;
 }
 
 .c-title__left{
@@ -1766,7 +1872,7 @@ margin-left: 1vw;
 }
 
 .p-accessMain__text{
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 2px;
   line-height: 2;
 }
@@ -1787,16 +1893,24 @@ margin-left: 1vw;
   margin-top: 3vh;
 }
 
-@media screen and (max-width: 375px) {
+iframe {
+	width: 40vw;
+	height: 60vh;
+	aspect-ratio: 16/9;
+}
+
+@media screen and (max-width: 400px) {
   .l-access{
     display: block;
     background-color: #fafafa;
     padding: 5vh 0;
+    margin: 0 auto;
   }
 
   .p-accessMain{
-    margin: 0px auto 3vh auto;
+    margin: 0px auto 4vh auto;
     width: 90%;
+    padding-top: 0;
   }
 
   .c-title__left{
@@ -1860,35 +1974,35 @@ margin-left: 1vw;
   letter-spacing: 3px;
   line-height: 1.5;
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 8vh;
 }
 
 .p-contactContents{
-  width: 900px;
+  width: 750px;
   padding-top: 14vh;
   margin: 0 auto;
 }
 
 .p-contactCheck p{
-  width: 250px;
+  width: 210px;
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: bold;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .l-contact{
-    width: 90%;
+    width: 75%;
     padding: 6vh 0 4vh 0;
     margin: 0 auto
   }
 
   .l-contact__text{
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .l-contact__subtext{
-    font-size: 13px;
+    font-size: 12px;
     margin-top: 6vh;
   }
 
@@ -1898,7 +2012,7 @@ margin-left: 1vw;
   }
 
   .p-contactCheck p{
-    font-size: 17px;
+    font-size: 14px;
     letter-spacing: 1px;
     font-weight: bold;
   }
@@ -1910,7 +2024,7 @@ margin-left: 1vw;
   justify-content: left;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-contactCheck__place{
     display: block;
   }
@@ -1924,16 +2038,18 @@ input[type=radio] {
 .p-contactCheck__placeList{
   width: 550px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .p-contactCheck__placeList li{
-  width: 180px;
+  width: 178px;
 }
 
 .p-contactCheck__placeItem label{
   cursor: pointer;
   padding-left: 50px;
   position: relative;
+  font-size: 14px;
 }
 
 label::before,
@@ -1969,7 +2085,7 @@ input:checked + label::after {
   opacity: 1;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-contactCheck__placeList{
     width: 360px;
     display: block;
@@ -1987,14 +2103,18 @@ input:checked + label::after {
   margin-top: 80px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-contactCheck__type{
     display: block;
     margin-top: 8vh;
   }
 }
 
-/* 種別ラジオボタン */
+/* 種別チェックボックス */
+input[type=checkbox] {
+  display: none;
+}
+
 .p-contactCheck__typeList{
   width: 550px;
   display: flex;
@@ -2014,9 +2134,10 @@ input:checked + label::after {
   cursor: pointer;
   padding-left: 50px;
   position: relative;
+  font-size: 14px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-contactCheck__typeList{
     width: 360px;
     display: block;
@@ -2039,7 +2160,7 @@ input:checked + label::after {
 .p-contactForm li{
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 5vh;
 }
 
 .p-contactForm li:nth-child(3){
@@ -2048,18 +2169,18 @@ input:checked + label::after {
 
 .p-contactForm li:last-child{
   align-items: normal;
-  margin-bottom: 90px;
+  margin-bottom: 8vh;
 }
 
 .p-contactForm p{
-  width: 250px;
+  width: 210px;
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: bold;
 }
 
 .p-contactForm input{
-  width: 625px;
+  width: 425px;
   border: none;
   outline: none;
   border-bottom: 1px solid #666;
@@ -2067,21 +2188,22 @@ input:checked + label::after {
 }
 
 .p-contactForm__text textarea {
-  width: 625px;
+  width: 425px;
   height: 240px;
-  padding: 3vh 2vw;
+  padding: 1.5%;
 }
 
 ::placeholder{
-  font-size: 14px;
+  font-size: 17px;
   color: #999;
   font-family: YuMincho,'Yu Mincho', serif;
-  margin-left: 3vw;
+  margin-left: 2vw;
+  letter-spacing: 2px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .p-contactForm{
-    padding-top: 8vh;
+    padding-top: 6vh;
   }
 
   .p-contactForm li{
@@ -2089,7 +2211,7 @@ input:checked + label::after {
   }
 
   .p-contactForm li:nth-child(3){
-    margin-bottom: 8vh;
+    margin-bottom: 6vh;
   }
 
   .p-contactForm li:last-child{
@@ -2097,24 +2219,26 @@ input:checked + label::after {
   }
 
   .p-contactForm input{
-    width: 330px;
-    padding: 24px 0 14px 20px;
+    width: 300px;
+    padding: 18px 20px 10px 12px;
     margin: 0 auto;
   }
 
   .p-contactForm__text textarea {
-    width: 330px;
+    width: 300px;
     height: 200px;
-    padding: 20px 0 0 20px;
-    margin: 2vh 0 8vh 0;
+    padding: 10px 10px;
+    margin: 2vh 0 6vh 0;
   }
 
   .p-contactForm p{
     font-size: 16px;
+    width: 100%;
   }
 
   ::placeholder{
     font-size: 16px;
+    margin-left: 1vw;
 }
 }
 
@@ -2126,7 +2250,7 @@ input:checked + label::after {
 }
 
 input[type="submit"] {
-  width: 330px;
+  width: 260px;
   height: 70px;
   cursor: pointer;
   font-size: 16px;
@@ -2147,9 +2271,9 @@ input[type="submit"]:hover {
   opacity: 1;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   input[type="submit"] {
-    box-shadow: 1px 1px 4px #666;
+    width: 200px;
   }
 }
 
@@ -2186,12 +2310,13 @@ input[type="submit"]:hover {
   display: none;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .l-line{
     padding: 6vh 0;
     display: flex;
     flex-direction: column;
     background-color: #fff;
+    padding-top: 20px;
   }
 
   .l-line__imgPC{
@@ -2225,19 +2350,7 @@ input[type="submit"]:hover {
 }
 
 .p-footerTitle{
-  font-family: 'Comic Sans MS','American Typewriter','Futura','cursive';
   text-align: center;
-}
-
-.p-footerTitle__text{
-  color: #fff;
-  font-size: 45px;
-}
-
-.p-footerTitle__textSub{
-  color: #fff;
-  font-size: 13px;
-  margin-top: 2vh;
 }
 
 .p-footerTel{
@@ -2261,13 +2374,25 @@ input[type="submit"]:hover {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 3px;
+  position: relative;
   display: inline-block;
-	transition: all .3s ease 0s;
 }
 
-.p-footerLink a:hover{
-	cursor: pointer;
-  transform: scale(1.3);
+.p-footerLink a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .4s;
+}
+
+.p-footerLink a:hover::after {
+  transform: scale(1, 1);
 }
 
 .p-footerLink__slash{
@@ -2283,21 +2408,12 @@ input[type="submit"]:hover {
   padding-right: 8vw;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
 
   .l-footer{
     width: 100%;
     background-color: #000;
     padding: 5vh 0 4vh 0;
-  }
-
-  .p-footerTitle__text{
-    font-size: 35px;
-  }
-
-  .p-footerTitle__textSub{
-    font-size: 8px;
-    margin-top: 1vh;
   }
 
   .p-footerTel{

@@ -6,18 +6,22 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="./style/style.css" />
         <link rel="stylesheet" href="./style/reset.css" />
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <title>YuMeCAFE</title>
     </head>
     <body class="l-body">
         <div class="l-wrap">
             <div class="l-header">
+                <div class="p-headerImg">
+                    <img src="img/top01.jpg" alt="トップの画像01">
+                    <img src="img/top02.jpg" alt="トップの画像02">
+                </div>
                 <div class="p-nav">
                     <ul class="p-nav__icon">
-                        <li><img class="p-nav__iconInstaglam" src="img/instaglam.png" alt="インスタグラムのアイコン"></li>
-                        <li><img class="p-nav__iconFacebook" src="img/facebook.png" alt="フェイスブックのアイコン"></li>
-                        <li><img class="p-nav__iconTwitter" src="img/twitter.png" alt="ツイッターのアイコン"></li>
+                        <li><a href="#"><i class="p-nav__iconItem" data-feather="twitter"></i></a></li>
+                        <li><a href="#"><i class="p-nav__iconItem" data-feather="facebook"></i></a></li>
+                        <li><a href="#"><i class="p-nav__iconItem" data-feather="instagram"></i></a></li>
                     </ul>
                     <ul class="p-nav__text">
                         <li><a href="#news" class="p-nav__textNews">NEWS</a></li>
@@ -35,26 +39,25 @@
                 <div class="l-hamburger">
                     <div class="p-hamburgerMenu">
                         <ul class="p-hamburgerText">
-                            <li><a href="#news" class="p-hamburgerText__news">NEWS</a></li>
-                            <li><a href="#access" class="p-hamburgerText__access">ACCESS</a></li>
-                            <li><a href="#contact" class="p-hamburgerText__contact">CONTACT</a></li>
+                            <li><a href="#news" class="p-hamburgerText__news fa-fw">NEWS</a></li>
+                            <li><a href="#access" class="p-hamburgerText__access fa-fw">ACCESS</a></li>
+                            <li><a href="#contact" class="p-hamburgerText__contact fa-fw">CONTACT</a></li>
                         </ul>
                         <ul class="p-hamburgerIcon">
-                            <li><a href="#"><img class="p-hamburgerIcon__instaglam" src="img/instaglam.png" alt="インスタグラムのアイコン"></a></li>
-                            <li><a href="#"><img class="p-hamburgerIcon__facebook" src="img/facebook.png" alt="フェイスブックのアイコン"></a></li>
-                            <li><a href="#"><img class="p-hamburgerIcon__Twitter" src="img/twitter.png" alt="ツイッターのアイコン"></a></li>
+                            <li><a href="#"><i class="p-hamburgerIcon__item" data-feather="twitter"></i></a></li>
+                            <li><a href="#"><i class="p-hamburgerIcon__item" data-feather="facebook"></i></a></li>
+                            <li><a href="#"><i class="p-hamburgerIcon__item" data-feather="instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="p-headerContents">
                     <div class="p-headerTitle">
-                        <h1 class="p-headerTitle__text">YuMeCAFE</h1>
-                        <p class="p-headerTitle__textSub">～夢カフェ～</p>
+                        <img class="c-title__img" src="img/title.png">
                     </div>
                     <div class="p-headerMain">
                         <p class="p-headerMain__textTop">
-                            YuMeCAFEは1947年（昭和22）年に建てられた古民家を
-                            リノベーションした古民家カフェです。
+                            YuMeCAFEは1947年（昭和22）年に建てられた古民家を<br>
+                            リノベーションした古民家カフェです。<br>
                             この家に古くからあったモノたちをそのまま活かしています。
                         </p>
                         <p class="p-headerMain__textBottom">
@@ -62,7 +65,20 @@
                             小上がりスペースもあり、ゆっくりとくつろげます。
                         </p>
                     </div>
-                    <div class="c-headerScroll"><span>scroll</span></div>
+                    <div class="p-headerMain__sp">
+                        <p class="p-headerMain__textTop--sp">
+                            YuMeCAFEは1947年（昭和22）年に<br>
+                            建てられた古民家をリノベーションした<br>古民家カフェです。<br>
+                            この家に古くからあったモノたちを<br>そのまま活かしています。
+                        </p>
+                        <p class="p-headerMain__textBottom--sp">
+                            和の雰囲気をそのままに残した店内には、<br>
+                            小上がりスペースもあり、ゆっくりと<br>くつろげます。
+                        </p>
+                    </div>
+                </div>
+                <div class="c-headerScroll">
+                    <span>scroll</span>
                 </div>
             </div>
             <section class="l-top">
@@ -129,7 +145,7 @@
                 </div>
             </section>
             <section class="l-news" id="news">
-            <h2 class="c-title__center">NEWS</h2>
+                <h2 class="c-title__center">NEWS</h2>
                 <ul class="p-newsContents">
                     <li class="p-newsContents__item09"><a href="#">
                         <img class="p-newsContents__itemImg" src="img/news01.jpg" alt="09月のNEWS画像">
@@ -150,7 +166,9 @@
                         <p class="p-newsContents__itemDay">2022.09.29</p>
                     </a></li>
                 </ul>
-                <a href="#" class="p-newsContents__bottom">VIEW MORE</a>
+                <div class="p-newsContents__bottomText">
+                    <a href="#" class="p-newsContents__bottom">VIEW MORE</a>
+                </div>
             </section>
             <section class="l-menuTop">
                 <img class="l-menuTop__img" src="img/menu.png" alt="ケーキの画像">
@@ -419,7 +437,7 @@
                                 </li>
                                 <li class="p-memberContents__text">
                                     <p class="p-memberContents__textBox3">
-                                    ・お会計から\500割引<br>
+                                    ・お会計から¥500割引<br>
                                     ・入り口ドアを開けられるカードキー<br>
                                     ・オリジナルスイーツの提供
                                     </p>
@@ -429,7 +447,7 @@
                                 </li>
                                 <li class="p-memberContents__text">
                                     <p class="p-memberContents__textBox5">
-                                    会員費は \11,000/1年、\22,000/永久 になります。<br>
+                                    会員費は ¥11,000/1年、¥22,000/永久 になります。<br>
                                     新規会員をご検討いただける方はお気軽にスタッフまでお声がけください。
                                     </p>
                                 </li>
@@ -453,7 +471,7 @@
                 .0472299115477!2d139.6346172148179!3d35.65120798020139!2m3!1f0!2f0!3f0!
                 3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f3963e5f12c3%3A0xda01a62e6034083!
                 2z57WM5aCC6aeF!5e0!3m2!1sja!2sjp!4v1666757743217!5m2!1sja!2sjp"
-                width="500px" height="550px" style="border:0;" allowfullscreen=""
+                width="400px" height="450px" style="border:0;" allowfullscreen=""
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
             <section class="l-contact" id="contact">
@@ -484,27 +502,27 @@
                             <p class="c-contact__CheckLead">お問い合わせの種別</p>
                             <ul class="p-contactCheck__typeList">
                                 <li class="p-contactCheck__typeItem">
-                                    <input type="radio" id="02-A" name="radio2">
+                                    <input type="checkbox" id="02-A" name="radio2">
                                     <label for="02-A">予約</label>
                                 </li>
                                 <li class="p-contactCheck__typeItem">
-                                    <input type="radio" id="02-B" name="radio2">
+                                    <input type="checkbox" id="02-B" name="radio2">
                                     <label for="02-B">取材</label>
                                 </li>
                                 <li class="p-contactCheck__typeItem">
-                                    <input type="radio" id="02-C" name="radio2">
+                                    <input type="checkbox" id="02-C" name="radio2">
                                     <label for="02-C">貸切</label>
                                 </li>
                                 <li class="p-contactCheck__typeItem">
-                                    <input type="radio" id="02-D" name="radio2">
+                                    <input type="checkbox" id="02-D" name="radio2">
                                     <label for="02-D">撮影</label>
                                 </li>
                                 <li class="p-contactCheck__typeItem">
-                                    <input type="radio" id="02-E" name="radio2">
+                                    <input type="checkbox" id="02-E" name="radio2">
                                     <label for="02-E">寄贈</label>
                                 </li>
                                 <li class="p-contactCheck__typeItem">
-                                    <input type="radio" id="02-F" name="radio2">
+                                    <input type="checkbox" id="02-F" name="radio2">
                                     <label for="02-F">その他</label>
                                 </li>
                             </ul>
@@ -534,16 +552,15 @@
                 </div>
             </section>
             <section class="l-line">
-                <img class="l-line__imgPC" src="img/qrcode.jpeg">
-                <img class="l-line__imgSP" src="img/icon.png">
+                <img class="l-line__imgPC" src="img/qrcode.png">
+                <img class="l-line__imgSP" src="img/qrcode.png">
                 <p class="l-line__textPC">LINE＠友達追加方法<br>QRコードを読み取ると友達追加できます。</p>
                 <p class="l-line__textSP">LINE＠友達追加方法<br>上記ボタンを押すと友達追加できます。</p>
             </section>
             <div class="l-footer">
                 <a href="#">
                     <div class="p-footerTitle">
-                        <h1 class="p-footerTitle__text">YuMeCAFE</h1>
-                        <p class="p-footerTitle__textSub">～夢カフェ～</p>
+                        <img class="c-title__img" src="img/title.png">
                     </div>
                 </a>
                 <p class="p-footerTel">TEL:03-xxxx-xxxx</p>
@@ -562,6 +579,13 @@
                 $(window).load(function() {
                     $('.p-headerContents').delay(100).fadeIn(1000);
                 });
+                //headerImg:switch
+                $('.p-headerImg img:nth-child(n+2)').hide();
+                    setInterval(function() {
+                        $(".p-headerImg img:first-child").fadeOut(5000);
+                        $(".p-headerImg img:nth-child(2)").fadeIn(5000);
+                        $(".p-headerImg img:first-child").appendTo(".p-headerImg");
+                    }, 4000);
                 //hamburger
                 $('.c-navBtn').click(function(){
                     $('.l-hamburger').toggleClass('active');
@@ -572,6 +596,30 @@
                 $('.p-hamburgerText li').click(function () {
                     $('.l-hamburger').removeClass('active'),
                     $('.c-navBtn').toggleClass('closed');
+                });
+                // hamburger:scrollFixed
+                $(function(){
+                    var state = false;
+                    var pos;
+                    $('.c-navBtn').click(function(){
+                        if (state == false) {
+                            pos = $(window).scrollTop();
+                            $('body').addClass('fixed').css({'top': -pos});
+                            state = true;
+                        } else {
+                            $('body').removeClass('fixed').css({'top': 0});
+                            window.scrollTo(0, pos);
+                            state = false;
+                        }
+                    });
+                });
+                //hamburger:scrollColor
+                $(window).scroll(function () {
+                    if (620 < $(this).scrollTop()) {
+                        $('.c-navBtn__bar span').addClass('change-color');
+                    } else {
+                        $('.c-navBtn__bar span').removeClass('change-color');
+                    }
                 });
                 //home:fadeIn
                 $(function () {
@@ -693,6 +741,8 @@
                         }
                     }, 5);
                 });
+                // featherIcon
+                feather.replace()
             </script>
         </div>
         <div class="c-loadingBar"></div>
