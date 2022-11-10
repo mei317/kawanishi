@@ -669,7 +669,7 @@ body.fixed {
 
 @media screen and (max-width: 400px) {
   .l-story{
-    padding: 5vh 0;
+    padding: 10vh 0;
   }
 
   .p-storyTop__img{
