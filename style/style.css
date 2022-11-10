@@ -2250,6 +2250,7 @@ input[type=checkbox] {
 }
 
 input[type="submit"] {
+  border-radius: 0%;
   appearance: none;
   -webkit-appearance: none;
   width: 260px;
@@ -2266,6 +2267,7 @@ input[type="submit"] {
   opacity: 0.9;
   transition: .3s;
   box-shadow: 2px 2px 7px #666;
+  color: #999;
 }
 
 input[type="submit"]:hover {
