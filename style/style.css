@@ -20,7 +20,7 @@ body.fixed {
   overflow: hidden;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 400px) {
   .l-body{
     min-width: 400px;
     margin: 0 auto;
