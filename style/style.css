@@ -20,7 +20,7 @@ body.fixed {
   overflow: hidden;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 400px) {
   .l-body{
     min-width: 400px;
     margin: 0 auto;
@@ -292,7 +292,7 @@ body.fixed {
 /* ヘッダーテキスト */
 .p-headerContents{
   display: none;
-  position: relative;
+  position: absolute;
   top: 30vh;
   left: 13%;
 }
@@ -321,6 +321,12 @@ body.fixed {
 @media screen and (max-width: 400px) {
   .c-title__img{
     width: 200px;
+  }
+
+  .p-headerContents{
+    width: 300px;
+    display: none;
+
   }
 
   .p-headerMain__sp{
@@ -2137,10 +2143,11 @@ input[type=checkbox] {
 
 @media screen and (max-width: 400px) {
   .p-contactCheck__typeList{
-    width: 370px;
+    width: 300px;
   }
 
   .p-contactCheck__typeList li{
+    width: 130px;
     margin-top: 30px;
   }
 
