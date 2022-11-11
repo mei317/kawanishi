@@ -17,11 +17,14 @@ body.fixed {
 
 .l-wrap{
   width: 100%;
+  overflow: hidden;
+
 }
 
 @media screen and (max-width: 400px) {
   .l-body{
     min-width: 400px;
+    margin: 0 auto;
   }
 }
 
@@ -58,6 +61,7 @@ body.fixed {
 
 /* ヘッダーナビ */
 .p-nav{
+  width: 100%;
   position: absolute;
   top: 50px;
   right: 50px;
@@ -321,7 +325,7 @@ body.fixed {
   }
 
   .p-headerContents{
-    width: 340px;
+    width: 280px;
   }
 
   .p-headerMain__sp{
@@ -472,12 +476,12 @@ body.fixed {
   }
 
   .l-topNav p{
-    padding: 0 6vh;
+    padding: 0 6vw;
     justify-content: left;
   }
 
   .l-topNav p{
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .l-topTab{
@@ -1036,7 +1040,7 @@ margin-left: 1vw;
   }
 
   .p-newsContents__bottomText{
-      max-width: 300px;
+      max-width: 250px;
   }
 
   .p-newsContents__bottom{
@@ -1080,20 +1084,28 @@ margin-left: 1vw;
 }
 
 @media screen and (max-width: 400px) {
-  .p-newsContents__bottom::before{
+  .p-newsContents__bottom::before {
     bottom: -9px;
-    left: -8%;
-    width: 130%;
+    left: 0px;
+    width: 125%;
     height: 0.5px;
   }
 
   .p-newsContents__bottom::after {
     bottom: -5px;
     right: -22px;
-    width: 15px;
+    width: 12px;
     height: 0.5px;
   }
+  .p-newsContents__bottom:hover::before{
+    left:0%;
+  }
+
+  .p-newsContents__bottom:hover::after{
+    right:0%;
+  }
 }
+
 
 /*メニュートップ*/
 .l-menuTop{
@@ -1225,29 +1237,20 @@ margin-left: 1vw;
 
 @media screen and (max-width: 400px) {
   .l-mainNav{
-    justify-content: left;
     width: 100%;
     margin: auto;
-    overflow-x: scroll;
-    white-space: nowrap;
-    justify-content: left;
     padding: 5vh 0;
-
   }
 
   .l-mainNav p{
+    font-size: 11px;
     background-color: #fafafa;
-    margin: 0 6vw;
-    justify-content: left;
-  }
-
-  .l-mainNav p{
-    font-size: 12px;
+    letter-spacing: 3px;
   }
 
   .l-mainTab{
-    width: 50vw;
-    padding: 2px;
+    width: 22vw;
+    padding: 1.5px;
     text-align: center;
   }
 
@@ -2139,8 +2142,7 @@ input[type=checkbox] {
 
 @media screen and (max-width: 400px) {
   .p-contactCheck__typeList{
-    width: 360px;
-    display: block;
+    width: 370px;
   }
 
   .p-contactCheck__typeList li{
@@ -2329,7 +2331,12 @@ input[type="submit"]:hover {
 
   .l-line__imgSP{
     display: block;
-    width: 80px;
+    width: 90px;
+    transition: 0.3s;
+  }
+
+  .l-line__imgSP:hover{
+    opacity: 0.7;
   }
 
   .l-line__textPC{
