@@ -1908,7 +1908,6 @@ iframe {
     display: block;
     background-color: #fafafa;
     padding: 5vh 0;
-    margin: 0 auto;
   }
 
   .p-accessMain{
@@ -2091,7 +2090,7 @@ input:checked + label::after {
 
 @media screen and (max-width: 400px) {
   .p-contactCheck__placeList{
-    width: 360px;
+    width: 300px;
     display: block;
   }
 
