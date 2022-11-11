@@ -1190,8 +1190,7 @@ margin-left: 1vw;
 
 /* メインタブスタイル*/
 .l-mainTab{
-  width: 15vw;
-  padding: 2px;
+  padding: 0 10px 0 10px;
   text-align: center;
   position: relative;
 }
@@ -1234,6 +1233,10 @@ margin-left: 1vw;
   display: block;
 }
 
+.l-mainPanel{
+  margin: 0 auto;
+}
+
 /*メインタブ下線*/
 
 @media screen and (max-width: 400px) {
@@ -1250,8 +1253,7 @@ margin-left: 1vw;
   }
 
   .l-mainTab{
-    width: 22vw;
-    padding: 1.5px;
+    padding: 0 10px 0 10px;
     text-align: center;
   }
 
@@ -1908,6 +1910,7 @@ iframe {
     display: block;
     background-color: #fafafa;
     padding: 5vh 0;
+    margin: 0 auto;
   }
 
   .p-accessMain{
