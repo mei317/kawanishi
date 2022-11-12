@@ -577,9 +577,9 @@ body.fixed {
   }
 
   .l-home__img{
-    width: 300px;
+    width: 350px;
     height: 200px;
-    margin: 20vh 0 32vh 90px;
+    margin: 20vh 0 32vh 40px;
     display: block;
   }
 
