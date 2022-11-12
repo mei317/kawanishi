@@ -22,7 +22,7 @@ body.fixed {
 
 @media screen and (max-width: 400px) {
   .l-body{
-    min-width: 400px;
+    min-width: 320px;
     margin: 0 auto;
   }
 }
@@ -579,7 +579,7 @@ body.fixed {
   .l-home__img{
     width: 350px;
     height: 200px;
-    margin: 20vh 0 32vh 40px;
+    margin: 20vh 0 32vh 30px;
     display: block;
   }
 
