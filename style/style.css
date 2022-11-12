@@ -2193,8 +2193,6 @@ input[type=checkbox] {
   outline: none;
   border-bottom: 1px solid #666;
   padding: 12px;
-  appearance: none;
-  -webkit-appearance: none;
 }
 
 .p-contactForm__text textarea {
@@ -2215,6 +2213,8 @@ input[type=checkbox] {
   .p-contactForm{
     padding-top: 6vh;
     margin: 0 auto;
+    appearance: none;
+    -webkit-appearance: none;
   }
 
   .p-contactForm li{
