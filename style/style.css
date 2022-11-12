@@ -2213,8 +2213,6 @@ input[type=checkbox] {
   .p-contactForm{
     padding-top: 6vh;
     margin: 0 auto;
-    appearance: none;
-    -webkit-appearance: none;
   }
 
   .p-contactForm li{
@@ -2233,6 +2231,8 @@ input[type=checkbox] {
     width: 278px;
     padding: 18px 20px 10px 12px;
     margin: 0 auto;
+    appearance: none;
+    -webkit-appearance: none;
   }
 
   .p-contactForm__text textarea {
