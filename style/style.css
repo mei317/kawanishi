@@ -1168,7 +1168,7 @@ margin-left: 1vw;
   .l-menuTop__img{
     width: 350px;
     height: 190px;
-    margin: 4vh 0 0 0;
+    margin: 4vh 0 0 10px;
   }
 }
 
@@ -1459,6 +1459,7 @@ margin-left: 1vw;
 
 .c-table__sofa td{
   background-color: #eee;
+
 }
 
 @media screen and (max-width: 400px) {
@@ -2229,13 +2230,13 @@ input[type=checkbox] {
   }
 
   .p-contactForm input{
-    width: 300px;
+    width: 278px;
     padding: 18px 20px 10px 12px;
     margin: 0 auto;
   }
 
   .p-contactForm__text textarea {
-    width: 300px;
+    width: 278px;
     height: 200px;
     padding: 10px 10px;
     margin: 2vh 0 6vh 0;
